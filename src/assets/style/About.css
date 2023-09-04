@@ -1,0 +1,44 @@
+*{
+  margin: 0px;
+  padding: 0px; 
+}
+
+body{
+  background-color: black; 
+  color: #F4C6CC;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+} 
+
+@font-face {
+  font-family: 'Nixie';
+  src: url('../fonts/NixieOne.ttf');
+}
+ 
+.center{
+  margin: 0 auto;
+  display: table;
+}
+
+h1{
+  margin: 0 auto;
+  display: table;
+  margin-top: 4%; 
+}
+
+p{
+  margin: 0 auto;
+  display: table;
+}
+circle {
+  fill: none;
+  stroke-width: 1px;
+}
+
+h1:hover{
+  transform: scale(2);
+}
+

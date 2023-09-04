@@ -1,0 +1,78 @@
+*{
+  margin: 0px;
+  padding: 0px; 
+}
+
+body{
+  background-color: black;
+}
+
+@font-face {
+  font-family: 'Nixie';
+  src: url('../fonts/NixieOne.ttf');
+}
+
+h1{
+  color: #F4C6CC;
+  font-family: 'Nixie';
+  font-size: 3em;
+  margin-top: 7%;
+  font-weight: 400;
+}
+
+.works{
+  display: table;
+  margin: 0 auto;
+}
+
+h3{
+  color: #F4C6CC;
+  font-family: 'Nixie';
+  font-weight: 400;
+  font-size: 1.7em;
+}
+
+p{
+  color: #EFE2E4;
+  font-family: 'Nixie';
+  padding: 3%;
+  font-size: 1em;
+}
+
+.col-inline{
+  display: inline-block;
+}
+
+.main-container{
+  padding: 4% 3% 0px 9%;
+}
+
+@media only screen and (max-width: 700px){
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .main-container {
+    padding: 3% 4% 0px 13%;
+  }
+
+  h3{
+    padding-top: 9%;
+  }
+}
+
+
+@media only screen and (max-width: 480px){
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .main-container {
+    padding: 3% 8% 0px 13%;
+  }
+
+}
