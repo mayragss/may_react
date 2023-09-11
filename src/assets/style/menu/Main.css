@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        
+        body {
+            background: #083358;
+            font-family: "Open Sans";
+            text-align: center;
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        h3 {
+            color: #F3F908;
+            margin: 0 0 25px 0;
+        }
+        
+        #yuvarlak {
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            margin: 60px auto 80px auto;
+            position: relative;
+            color: black;
+            z-index: 10;
+        }
+        
+        #icerik {
+            z-index: 3;
+            position: relative;
+            background: rgba(121, 36, 36, 0.6);
+            width: 125px;
+            height: 125px;
+            border-radius: 100%;
+            color: white;
+            top: -40px;
+            left: -40px;
+            overflow: hidden;
+            transition: all .3s;
+            transform: scale(0.5) rotate(270deg);
+     
+        }
+        
+        .carpi {
+            display: block;
+            width: 42px;
+            height: 42px;
+            position: relative;
+            z-index: 20;
+            background-color: #ffffff;
+            border-radius: 100%;
+            left: 2px;
+            top: 44px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        
+        .carpi:before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 32px;
+            background: #5D5D5D;
+            top: 5px;
+            left: 20px;
+        }
+        
+        .carpi:after {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            background: #5D5D5D;
+            left: 5px;
+            top: 20px;
+        }
+        
+        .a,
+        .b,
+        .c,
+        .d {
+            position: absolute;
+            font-size: 25px;
+            opacity: 0;
+        }
+        
+        .a {
+            top: 5px;
+            left: 50px;
+        }
+        
+        .b {
+            top: 50px;
+            left: 5px;
+        }
+        
+        .c {
+            bottom: 5px;
+            left: 50px;
+        }
+        
+        .d {
+            top: 50px;
+            right: 5px;
+        }
+        
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        
+        #yuvarlak:hover > #icerik {
+            transform: scale(1);
+          transform: rotate(0);
+        }
+        
+        #yuvarlak:hover > #icerik span {
+            opacity: 1;
+        }
+        
+        #yuvarlak:hover > .carpi {
+            transform: rotate(135deg);
+        }
+        
+        #yuvarlak:hover > .carpi:before, #yuvarlak:hover > .carpi:after {
+            background: #4C8BCA;
+        }
+    
+        
+        #codery {
+            display: inline-block;
+            padding: 10px 15px;
+            text-align: center;
+            color: white;
+            border: 2px solid #fff;
+        }
+        
+        #codery:hover {
+            border: 2px dotted #fff;
+        }
+        
+        #icerik a:hover > span {
+            color: yellow;
+        }

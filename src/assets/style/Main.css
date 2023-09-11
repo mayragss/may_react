@@ -7,6 +7,147 @@ body{
   background-color: black;
 }
 
+.center{
+    margin: 0 auto;
+    display: table;
+}
+
+#yuvarlak {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin: 60px auto 80px auto;
+    position: relative;
+    color: black;
+    z-index: 10;
+}
+
+#icerik {
+    z-index: 3;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255,169,249,1) 10%, rgba(255,247,173,1) 90%);
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    color: white;
+    top: -40px;
+    left: -40px;
+    overflow: hidden;
+    transition: all .3s;
+    transform: scale(0.5) rotate(270deg);
+
+}
+
+.carpi {
+    display: block;
+    width: 42px;
+    height: 42px;
+    position: relative; 
+    background-color: #ffffff;
+    border-radius: 100%;
+    left: 2px;
+    top: 44px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.carpi:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background: #5D5D5D;
+    top: 5px;
+    left: 20px;
+}
+
+.carpi:after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #5D5D5D;
+    left: 5px;
+    top: 20px;
+}
+
+.a,
+.b,
+.c,
+.d {
+    position: absolute;
+    font-size: 25px;
+    opacity: 0;
+}
+
+.a {
+    top: 5px;
+    left: 50px;
+}
+
+.b {
+    top: 50px;
+    left: 5px;
+}
+
+.c {
+  left: 92px;
+  top: 50px;
+  font-size: 22px;
+}
+
+.d {
+  top: 95px;
+  left: 52px;
+  font-size: 23px;
+}
+
+.icon{
+    text-decoration: none;
+    color: white;
+}
+
+#yuvarlak:hover > #icerik {
+    transform: scale(1);
+  transform: rotate(0);
+}
+
+#yuvarlak:hover > #icerik span {
+    opacity: 1;
+}
+
+#yuvarlak:hover > .carpi {
+    transform: rotate(135deg);
+}
+
+#yuvarlak:hover > .carpi:before, #yuvarlak:hover > .carpi:after {
+    background: #4C8BCA;
+}
+
+
+#codery {
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    color: white;
+    border: 2px solid #fff;
+}
+
+#codery:hover {
+    border: 2px dotted #fff;
+}
+
+#icerik a:hover > span {
+    color: yellow;
+}
+
+body{
+  background-color: black;
+}
+
+
+
+
 @font-face {
   font-family: "Tittle";
   src: url('../fonts/Nickainley-Normal.otf');
@@ -66,55 +207,7 @@ a{
   font-family: 'Nixie';
   float: right;
 }
-
-.menu {
-  bottom: 0;
-  position: fixed; 
-}
-
-.menu-option-1 { 
-  position: absolute;  
-  transform: rotate(0deg);
-}
-
-.menu-option-2 {  
-  border-radius: 16px;
-  transform: rotate(6deg);
-  position: absolute;
-}
-
-.menu-option-3 { 
-  position: absolute;  
-  border-radius: 20px;
-}
-
-.menu-option-4 { 
-  position: absolute;  
-  border-radius: 29px;
-  transform: rotate(1deg);
-}
-
-.menu-option-5 { 
-  position: absolute;  
-  border-radius: 29px;
-  transform: rotate(5deg);
-}
-
-.menu-option-1:hover {
-  transform: perspective(500px) scaleZ(2) rotateY(45deg);
-}
-.menu-option-2:hover {
-  transform: rotate(270deg); /* Standard syntax */
-}
-.menu-option-3:hover {
-  transform: skewX(30deg);
-}
-.menu-option-4:hover {
-  transform: skewY(30deg);
-}
-.menu-option-5:hover {
-  transform: perspective(500px) scaleZ(2) rotateY(45deg);
-}  
+ 
 
 .glow { 
   -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -131,13 +224,14 @@ a{
   }
 }
 
-.option-1, .option-2, .option-3, .option-4, .option-5{
-  position: absolute;
-}
 
+ 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 10px) {
+  .tittle-container{
+    height: 243px;
+  }
 
   .role{  
     padding-top: 4%;
@@ -179,184 +273,7 @@ a{
 .role { 
   font-size: 10px;
 }
-}
- 
-@media only screen and (max-width: 400px){
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 7%;
-  }
-.menu {
-  width: 27%;
-}
-
-
-.option-5 {
-  bottom: 5%;
-  left: 21%;
-}
-
-.option-4 {
-  bottom: 8%;
-  left: 18%;
-}
-
-.option-3 {
-  bottom: 10%;
-  left: 13%;
-}
-
-.option-2 {
-  bottom: 11%;
-  left: 6%;
-}
-
-.option-1 {
-  bottom: 11%;
-  left: 0%;
-}
-}
- 
-@media only screen and (min-width: 400px){
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 7%;  
-  }  
-  
-  .option-5 {
-    bottom: 5%;
-    left: 21%;
-  }
-
-  .option-4 {
-    bottom: 8%;
-    left: 18%;
-  }
-
-  .option-3 {
-    bottom: 10%;
-    left: 13%;
-  }
-
-  .option-2 {
-    bottom: 11%;
-    left: 6%;
-  }
-
-  .option-1 {
-    bottom: 11%;
-    left: 0%;
-  }
-
-  .menu {
-    width: 26%;
-  }
-}
-
-@media only screen and (max-width: 491px) {
-  .menu-option-1 {
-    left: 0%; 
-  }   
-
-}
-
-
-@media only screen and (max-width: 376px){
-  .option-1 {
-    bottom: 16%;
-    left: 0%;
-  }
-
-  .option-2 {
-    bottom: 16%;
-    left: 8%;
-  }
-
-  .option-3 {
-    bottom: 14%;
-    left: 16%;
-  }
-
-  .option-4 {
-    bottom: 11%;
-    left: 22%;
-  }
-
-  .option-5 {
-    bottom: 7%;
-    left: 26%;
-  }
-
-  .menu {
-    width: 34%;
-  }
-
-}
-
-
-@media only screen and (max-width: 370px){
-  .menu {
-    width: 33%;
-  }
-
-  .option-1 {
-    bottom: 13%;
-    left: 1%;
-  }
-
-  .option-2 {
-    bottom: 13%;
-    left: 9%;
-  }
-
-  .option-3 {
-    bottom: 12%;
-    left: 17%;
-  }
-
-  .option-4 {
-    bottom: 9%;
-    left: 23%;
-  }
-
-  .option-5 {
-    bottom: 6%;
-    left: 26%;
-  }
-
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 7%;
-  }
-
-}
-
-@media only screen and (min-width: 492px) {
-  
-.menu { 
-  width: 23%;
-}
-
-  .option-1{
-    bottom: 21%; 
-  }
-  .option-2 {
-    bottom: 20%; 
-    left: 6%;
-  }
-  
-  .option-3 {
-    bottom: 18%; 
-    left: 12%;
-  }
-
-  .option-4 {
-    bottom: 14%; 
-    left: 17%;
-  }
-
-  .option-5 {
-    bottom: 9%; 
-    left: 20%;
-  }
-}
+} 
 
 /* Small devices (portrait tablets and large phones, 500px and up) */
 @media only screen and (min-width: 500px) {
@@ -380,151 +297,13 @@ a{
     text-shadow: #bf2799e8 0px 0px 33px;
     font-size: 10em; 
   }
-}
- 
-
-/* Extra small devices (phones, 600px and down) -- responsive*/
-@media only screen and (max-width: 6000px) {
-  .option-about {
-    margin-left: 1%;
-    position: fixed;
-    
-  }
-  .menu-option-1{
-    margin-top: 3%;
-    position: fixed;
-  }
-
-
-
-  .option-github {
-    margin-left: 2%;
-    position: fixed;
-    
-  }
-
-  .menu-option-2{
-    margin-top: 3%;
-    position: fixed;
-  }
-  
-
-
-
-  .option-projects {
-    margin-left: 2%;
-    position: fixed;
-    
-  }
-  .menu-option-3{
-    margin-top: 3%;
-    position: fixed;
-  }
-
-
-
-
-
-  .option-budgets {
-    margin-left: 2%;
-    position: fixed;
-    
-  }
-  .menu-option-4{
-    margin-top: 3%;
-    position: fixed;
-  }
-
-
-
-  .option-contacts {
-    margin-left: 12%;
-    position: fixed;
-    
-  }
-  .menu-option-5{
-    margin-top: 3%;
-    position: fixed;
-  }
-
-
-
-
-
-  .option-projects, .option-budgets, .option-contacts{
-    margin-left: 5%;
-  }
-
-}
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) -- responsive */
-@media only screen and (min-width: 600px) {
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 5%;
-  }
-
-  .menu {
-    width: 21%;
-  }
-}
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) -- responsive */
-@media only screen and (min-width: 660px) {
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 5%;
-  }
-
-  .menu {
-    width: 21%;
-  }
-
-  .option-1 {
-    bottom: 21%;
-  }
-
-  .option-2 {
-    bottom: 21%;
-    left: 5%;
-  }
-
-  .option-3 {
-    bottom: 19%;
-    left: 11%;
-  }
-
-  .option-4 {
-    bottom: 15%;
-    left: 15%;
-  }
-
-  .option-5 {
-    bottom: 9%;
-    left: 17%;
-  }
-}
-
-@media only screen and (min-width: 710px) {
-  .menu {
-    width: 17%;
-}
-.option-5 {
-  bottom: 9%;
-  left: 16%;
-}
-.option-4 {
-  bottom: 14%;
-  left: 14%;
-}
-.option-3 {
-  bottom: 19%;
-  left: 11%;
-}
-}
+} 
 
 /* Medium devices (landscape tablets, 768px and up) -- responsive */
 @media only screen and (min-width: 768px) {
+  .tittle-container{
+    height: 383px;
+  }
   .tittle{ 
     text-shadow: #851358e8 12px 6px 19px; 
     font-size: 12em; 
@@ -534,148 +313,14 @@ a{
     text-shadow: #bf2799e8 0px 0px 33px;
     font-size: 12em; 
   }
-
-  .menu {
-    width: 23%;
-  }
-
-  .option-1 {
-    bottom: 16%;
-  }
-
-  .option-2 {
-    bottom: 16%;
-    left: 6%;
-  }
-
-  .option-3 {
-    bottom: 14%;
-    left: 12%;
-  }
-
-  .option-4 {
-    bottom: 11%;
-    left: 17%;
-  }
-
-  .option-5 {
-    bottom: 7%;
-    left: 19%;
-  }
-
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 6%;
-  }
 }
 
-/* Medium devices (landscape tablets, 768px and up) -- responsive */
-@media only screen and (min-width: 770px) { 
-
-  .menu {
-    width: 23%;
-  }
-
-  .option-1 {
-    bottom: 26%;
-  }
-
-  .option-2 {
-    bottom: 26%;
-    left: 6%;
-  }
-
-  .option-3 {
-    bottom: 23%;
-    left: 12%;
-  }
-
-  .option-4 {
-    bottom: 17%;
-    left: 17%;
-  }
-
-  .option-5 {
-    bottom: 11%;
-    left: 19%;
-  }
-
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 5%;
-  }
-}
-
-
-@media only screen and (min-width: 819px)
-{
-  .menu {
-      width: 28%;
-  }
-
-  .option-5 {
-    bottom: 7%;
-    left: 23%;
-  }
-
-  .option-4 {
-    bottom: 11%;
-    left: 20%;
-  }
-
-  .option-3 {
-    bottom: 15%;
-    left: 15%;
-  }
-
-  .option-2 {
-    bottom: 17%;
-    left: 8%;
-  }
-  .option-1 {
-    bottom: 17%;
-    left: 1%;
-  }
-}
-
-
-@media only screen and (min-width: 911px){
-  a{    font-size: 1em;}
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 7%;
-  }
-
-  .option-5 {
-    bottom: 7%;
-    left: 23%;
-  }
-
-  .option-4 {
-    bottom: 11%;
-    left: 20%;
-  }
-
-  .option-3 {
-    bottom: 14%;
-    left: 15%;
-  }
-
-  .option-2 {
-    bottom: 16%;
-    left: 8%;
-  }
-
-  .option-1 {
-    bottom: 16%;
-    left: 1%;
-  } 
-
-  .menu {
-    width: 28%;
-  }
-
-}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) { 
+  .tittle-container{
+    height: 425px;
+  }
  
   .tittle{ 
     text-shadow: #851358e8 12px 6px 19px; 
@@ -693,85 +338,13 @@ a{
   }
 }
 
-@media only screen and (min-width: 1020px){
-  .menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-    width: 4%;
-  }
-
-  .menu {
-    width: 17%;
-  }
-
-  a {
-    font-size: 0.8em;
-  }
-  
-  .option-5 {
-    bottom: 12%;
-    left: 14%;
-  }
-
-  .option-4 {
-    bottom: 19%;
-    left: 12%;
-  }
-
-  .option-3 {
-    bottom: 24%;
-    left: 9%;
-  }
-
-  .option-2 {
-    bottom: 26%;
-    left: 5%;
-  }
-
-  .option-1 {
-    bottom: 27%;
-    left: 1%;
-  }
-
-}
-
-
-@media only screen and (min-width: 1070px){
-  .option-1 {
-    bottom: 30%;
-    left: 1%;
-  }
-
-  .option-2 {
-    bottom: 30%;
-    left: 5%;
-  }
-
-  .option-3 {
-    bottom: 27%;
-    left: 9%;
-  }
-
-  .option-4 {
-    bottom: 21%;
-    left: 12%;
-  }
-
-  .option-5 {
-    bottom: 13%;
-    left: 13%;
-  }
-
-  .option-projects, .option-budgets, .option-contacts {
-    margin-left: 4%;
-    margin-top: 2%;
-  }
-
-  .option-about, .option-github{
-    margin-top: 1%;
-  }
-}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) { 
+  .tittle-container{
+    height: 457px;
+  }
+
   .tittle{ 
     text-shadow: #851358e8 12px 6px 19px; 
     font-size: 14em; 
@@ -785,92 +358,4 @@ a{
   .role{ 
     font-size: 17px;
   }
-  .option-1 {
-    bottom: 33%;
-    left: 1%;
-  }
-  .option-2 {
-    bottom: 32%;
-    left: 5%;
-  }
-  .option-3 {
-    bottom: 28%;
-    left: 9%;
-  }
 }  
-
-
-@media only screen and (min-width: 1507px){
-  .menu {
-    width: 16%;
-}
-.menu-option-1, .menu-option-2, .menu-option-3, .menu-option-4, .menu-option-5 {
-  width: 4%;
-}
-.option-1 {
-  bottom: 33%;
-  left: 1%;
-}
-.option-2 {
-  bottom: 32%;
-  left: 5%;
-}
-.option-3 {
-  bottom: 29%;
-  left: 9%;
-}
-.option-4 {
-  bottom: 24%;
-  left: 12%;
-}
-.option-5 {
-  bottom: 16%;
-  left: 13%;
-}
-}
-
-@media only screen and (min-width: 1760px){
-  .menu {
-    width: 15%;
-  }
-.option-5 {
-  bottom: 12%;
-  left: 13%;
-  }
-  .option-2 {
-    bottom: 27%;
-    left: 5%;
-}
-}
-
-
-@media only screen and (min-width: 1900px){
-  .menu {
-    width: 13%;
-  }
-
-  .option-5 {
-    bottom: 13%;
-    left: 10%;
-  }
-
-  .option-4 {
-    bottom: 19%;
-    left: 9%;
-  }
-
-  .option-3 {
-    bottom: 24%;
-    left: 7%;
-  }
-
-  .option-2 {
-    bottom: 27%;
-    left: 4%;
-  }
-
-  .option-1 {
-    bottom: 28%;
-    left: 1%;
-  }
-}
